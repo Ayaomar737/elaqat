@@ -140,13 +140,194 @@ body {
     height: 90px;
 }
 
+/* services */
+
+.services{
+    background-image: url(../images/services\ -h2-bg-section-02.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.card-services{
+    background-color: white;
+    border-radius: 60px 8px 8px 8px;
+    box-shadow: 0 0 10px rgba(1, 25, 59, 0.06);
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+.card-services .image-icon{
+    width: 76px;
+    height: 76px;
+    background-image: linear-gradient(to right, #5870ae , var(--primary-color));
+    border-radius: 25px;
+    transform: rotate(45deg);
+    box-shadow: 0 6px 6px rgba(113,20,239,0.3);
+    z-index: 1;
+    position: relative;
+    transition: all 0.3s ease;
+}
+.card-services .image-icon svg{
+    color: white;
+    font-size: 30px;
+    transform: rotate(-45deg);
+    transition: all 0.3s ease;
+}
+.card-services .image-move{
+    margin-top: -60px;
+}
+.image-services{
+    background-image: linear-gradient(to right, #5870ae , var(--primary-color));
+    border-radius: 8px 60px 0px 0px;
+    z-index: 0;
+    position: relative;
+    display: none;
+    transition: all 0.3s ease;
+}
+.image-services img{
+    width: 100%;
+    height: 150px;
+}
+.content-services h4{
+    position: relative;
+    transition: all 0.3s ease;
+}
+.content-services h4::before{
+    content: "";
+    width: 100px;
+    height: 4px;
+    background-image: linear-gradient(to right, #5870ae , var(--primary-color));
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    top: 150%;
+    transition: all 0.3s ease;
+}
+.content-services p{
+    color: #57586d;
+    line-height: 2;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+.card-hover{
+    margin: 50px 10px 10px 20px;
+}
+.card-hover:hover .card-services{
+    border-radius: 8px 0px 0px 0px;
+}
+.card-hover:hover h4::before{
+    display: none;
+}
+.card-hover:hover p{
+    margin-top: 0!important;
+}
+.card-hover:hover .image-services{
+    display: block;
+    margin-bottom: -60px;
+}
+.card-hover:hover .image-icon{
+    background: white;
+}
+.card-hover:hover svg{
+    color: var(--primary-color);
+}
+
+/*  */
+.slider-wrapper {
+    position: relative;
+  }
+  
+  .custom-prev,
+  .custom-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #fff;
+    border: none;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    z-index: 10;
+    cursor: pointer;
+  }
+  
+  .custom-prev { right: -20px; }
+  .custom-next { left: -20px; }
+  
+  .custom-slider-progress {
+    position: relative;
+    width: 70%;
+    height: 4px;
+    background: #eee;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 30px auto 0;
+  }
+  
+  .progress-track {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ccc;
+    border-radius: 10px;
+  }
+  
+  .progress-indicator {
+    position: absolute;
+    top: 0; /* المهم هذا السطر */
+    left: 0;
+    width: 20%;
+    height: 100%;
+    background: #2647a3;
+    border-radius: 10px;
+    transition: left 0.3s ease;
+  }
+  
+  
+  .progress-indicator {
+    position: absolute;
+    width: 20%;
+    height: 100%;
+    background: #2647a3;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+  }
+
+  .services .owl-carousel .owl-prev{
+    left: 1%;
+}
+.services .owl-carousel .owl-next{
+    right: 1%;
+}
+.services .owl-carousel .owl-prev ,
+.services .owl-carousel .owl-next{
+    position: absolute;
+    top: 100%;
+}
+.services .owl-carousel .owl-prev span ,
+.services .owl-carousel .owl-next span{
+    font-size: 30px;
+    color: black;
+    background-color: white;
+    border-radius: 50px;
+    padding: 0 15px;
+    box-shadow: rgba(1, 25, 59, 0.1) 0px 0px 13px;
+}
+.services .owl-carousel .owl-nav button.owl-prev:hover,
+.services .owl-carousel .owl-nav button.owl-next:hover{
+    background-color: transparent;
+}
+  
+
 /* project */
 
 .project {
     background-image: url(../images/bg-section-project.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    /* padding-bottom: 200px !important; */
 }
 
 .card-project {

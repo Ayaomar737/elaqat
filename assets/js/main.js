@@ -2,6 +2,48 @@ $(function () {
 
     'use strict';
 
+     // services carousel
+
+        var $carousel = $(".owl-carousel");
+        var totalItems = $carousel.find(".card-hover").length;
+        var visibleItems = 3;
+        var totalSteps = totalItems - visibleItems + 1;
+      
+        var indicatorStep = 100 / totalSteps;
+      
+        $(".services .owl-carousel").owlCarousel({
+            autoplay: true,
+            autoplayhoverpause: true,
+            autoplaytimeout: 100,
+            items: 3,
+            nav: true,
+            loop: false,
+            dots: false,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                485: {
+                    items: 1
+                },
+                728: {
+                    items: 2
+                },
+                1200: {
+                    items: 3
+                }
+            }
+        });
+      
+        $carousel.on("changed.owl.carousel", function (event) {
+          var currentSlide = event.item.index;
+          var step = Math.min(currentSlide, totalSteps - 1); 
+          var percentage = (step / (totalSteps - 1)) * 100;
+          $(".progress-indicator").css("left", percentage + "%");
+        });
+      
+
+    
 
     // project carousel
 
