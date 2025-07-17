@@ -1,7 +1,7 @@
 body {
     font-family: "Kufam", sans-serif;
     scroll-behavior: smooth;
-    direction: rtl;
+    direction: ltr;
     padding: 0;
     margin: 0;
 }
@@ -97,7 +97,7 @@ body {
     width: 200px;
     position: relative;
     z-index: 1;
-   padding-right: 35px;
+   padding-left: 35px;
 }
 .navbar-brand::after{
     content: '';
@@ -109,9 +109,10 @@ body {
     z-index: -1;
     top: 0;
     transform: skewX(-25deg);
-    right: auto;
-    left: 35px;
+    left: auto;
+    right: 35px;
 }
+
 
 /* section video */
 
@@ -171,7 +172,7 @@ body {
     margin-bottom: 25px;
 }
 .about-list .icon-about {
-    margin-left: 20px;
+    margin-right: 20px;
 }
 .about-list p{
     line-height: 2;
@@ -194,23 +195,20 @@ body {
 
 .count {
     background-color: var(--primary-color);
-    background-image: url(../images/bg-count.png);
-    background-size: cover;
     padding: 50px 0;
 }
 
 .count .row>div:not(:last-child) {
-    border-left: 1px dashed white;
+    border-right: 1px dashed white;
     border-radius: 0;
 }
 
 @media screen and (max-width: 768px) {
    .count .row>div:not(:last-child) {
-    border-left: none;
+    border-right: none;
 }
 
 }
-
 
 .count .image-icon img {
     height: 90px;
@@ -456,7 +454,7 @@ body {
 }
 
 .content-project {
-    background-image: url(../images/shape-project.png);
+    background-image: url(../images/shape-project-en.png);
     background-size: cover;
     width: 100%;
     height: max-content;
@@ -466,7 +464,6 @@ body {
     bottom: 0;
     opacity: 0.8;
     transition: bottom 0.3s ease;
-    text-align: right;
 }
 
 .card-project:hover .content-project {
@@ -536,7 +533,7 @@ body {
 .testimonial .card-testimonial {
     background-image: url(../images/shape-testimonial.png);
     background-size: 100% 100%;
-    background-repeat: no-repeat;
+        background-repeat: no-repeat;
     background-position: center;
     padding: 100px 70px;
     margin-top: 40px;
@@ -592,7 +589,6 @@ body {
 .image-partner {
     margin: 0 20px;
 }
-
 @media screen and (max-width: 768px) {
   .partner .owl-theme .owl-nav.disabled+.owl-dots{
     display: none;
@@ -612,7 +608,7 @@ body {
 }
 
 .contact-card .image-icon {
-    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .contact-card {
@@ -692,7 +688,6 @@ body {
     margin-bottom: 40px;
     font-weight: 600;
 }
-
 /* responsive */
 
 @media screen and (max-width: 768px) {
